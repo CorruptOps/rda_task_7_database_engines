@@ -22,12 +22,12 @@ CREATE TABLE ProductDescription (
     ProductID INT,
     Description VARCHAR(100),
     PRIMARY KEY (ID)
-) ENGINE=MyISAM;
+) ENGINE=InnoDB;
 -- Create a table for storing logs. For now we don't need to save them, but we need to implement functionality (Columns: ID, Time, LogRecord)
-CREATE TABLE logs(
+CREATE TABLE Logs(
     ID INT PRIMARY KEY,
-    Time DATE,
-    LogRecord VARCHAR(100)
+    Timestamp DATE,
+    Message VARCHAR(100)
 ) ENGINE=Blackhole;
 -- Create a table for storing reporting data, which will be send to a separate application in the CSV format for analytics purposes (Columns:  Date, ProductName, Orders)
 CREATE TABLE  ProductReporting(
